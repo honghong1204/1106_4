@@ -22,9 +22,3 @@ def wins(nums):
     toReturn.append(count)
     toReturn.append(PassedIndex)
     return toReturn
-
-
-# wins([1, 2, 4, 1, 1, 1])
-# wins([4, 3, 1, 2, 3, 9, 1, 2])
-
-
