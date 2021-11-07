@@ -1,4 +1,4 @@
-def wins(nums):
+def win(nums):
     listLength = len(nums)
     curLoc = 0
     PassedIndex = []
@@ -9,6 +9,8 @@ def wins(nums):
         curMaxStepOption = nums[curLoc]
         MaxInOptions = 0
         curMaxLoc = 0
+        if curLoc == 0:
+            MaxInOptions = curMaxStepOption
         for TryWithinOptions in range(1, curMaxStepOption + 1):
             if curLoc + TryWithinOptions == listLength - 1:  # Meet the last index
                 curMaxLoc = listLength - 1
@@ -16,9 +18,17 @@ def wins(nums):
             if nums[curLoc + TryWithinOptions] >= MaxInOptions:  # Try within possibilities and make the greatest one
                 MaxInOptions = nums[curLoc + TryWithinOptions]
                 curMaxLoc = curLoc + TryWithinOptions
-        PassedIndex.append(curMaxLoc)
         curLoc = curMaxLoc
-        count += 1
+        if curMaxLoc == 0:
+            curLoc += 1
+        else:
+            PassedIndex.append(curMaxLoc)
+            count += 1
     toReturn.append(count)
     toReturn.append(PassedIndex)
     return toReturn
+
+
+# print(win([3, 2, 1, 1, 1]))
+print(win([1, 2, 4, 1, 1, 1]))
+print(win([4, 3, 1, 2, 3, 9, 1, 2]))
