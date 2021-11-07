@@ -30,5 +30,5 @@ def win(nums):
 
 
 # print(win([3, 2, 1, 1, 1]))
-print(win([1, 2, 4, 1, 1, 1]))
-print(win([4, 3, 1, 2, 3, 9, 1, 2]))
+# print(win([1, 2, 4, 1, 1, 1]))
+# print(win([4, 3, 1, 2, 3, 9, 1, 2]))
