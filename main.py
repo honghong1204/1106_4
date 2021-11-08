@@ -25,10 +25,12 @@ def win(nums):
             PassedIndex.append(curMaxLoc)
             count += 1
     toReturn.append(count)
+    if curLoc == 0:
+        PassedIndex.append(curLoc)
     toReturn.append(PassedIndex)
     return toReturn
 
 
-# print(win([3, 2, 1, 1, 1]))
-# print(win([1, 2, 4, 1, 1, 1]))
-# print(win([4, 3, 1, 2, 3, 9, 1, 2]))
+print(win([1]))
+print(win([1, 2, 4, 1, 1, 1]))
+print(win([4, 3, 1, 2, 3, 9, 1, 2]))
